@@ -1,0 +1,93 @@
+{
+  "navigation": {
+    "introduction": "Introduction",
+    "brand": "Brand Introduction",
+    "announcements": "Announcements",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "slide1": {
+      "title": "Authentic Italian Cuisine",
+      "description": "Experience the finest flavors from Italy"
+    },
+    "slide2": {
+      "title": "Farm Fresh Ingredients",
+      "description": "Sourced locally for the best quality"
+    },
+    "slide3": {
+      "title": "Warm & Welcoming Atmosphere",
+      "description": "Perfect for family dining and special occasions"
+    },
+    "exploreMenu": "Explore Menu"
+  },
+  "introduction": {
+    "title": "Welcome to Delicious Bites",
+    "content": "At Delicious Bites, we believe that great food brings people together. Our passion for culinary excellence drives us to create memorable dining experiences using the finest ingredients and time-honored recipes. Whether you're joining us for a casual lunch, romantic dinner, or special celebration, we're committed to serving you exceptional food in a warm, welcoming atmosphere."
+  },
+  "brand": {
+    "title": "Our Story",
+    "subtitle": "Founded in 2015, Delicious Bites has been serving the community with authentic flavors and exceptional hospitality for over 8 years.",
+    "journeyTitle": "A Culinary Journey",
+    "journeyContent1": "What started as a small family restaurant has grown into a beloved dining destination. Our commitment to quality, innovation, and customer satisfaction has remained unchanged throughout our journey.",
+    "journeyContent2": "We take pride in creating dishes that not only taste amazing but also tell a story of tradition, creativity, and the love we have for food.",
+    "features": {
+      "chefs": {
+        "title": "Expert Chefs",
+        "description": "Our experienced chefs bring passion and creativity to every dish"
+      },
+      "love": {
+        "title": "Made with Love",
+        "description": "Every meal is prepared with care and attention to detail"
+      },
+      "quality": {
+        "title": "Premium Quality",
+        "description": "We use only the finest ingredients sourced from trusted suppliers"
+      }
+    }
+  },
+  "announcements": {
+    "title": "Latest Announcements",
+    "subtitle": "Stay updated with our latest news and offerings",
+    "readMore": "Read More",
+    "backToList": "Back to Announcements"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us for reservations, inquiries, or feedback",
+    "location": "Location",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "sendMessage": "Send us a Message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone (Optional)",
+      "message": "Message",
+      "send": "Send Message"
+    },
+    "schedule": {
+      "weekdays": "Monday - Thursday: 11:00 AM - 10:00 PM",
+      "weekends": "Friday - Saturday: 11:00 AM - 11:00 PM",
+      "sunday": "Sunday: 12:00 PM - 9:00 PM"
+    }
+  },
+  "footer": {
+    "description": "Serving exceptional food and creating memorable dining experiences since 2015.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "openingHours": "Opening Hours",
+    "copyright": "© 2024 Delicious Bites. All rights reserved."
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "subtitle": "Manage your F&B website content and settings",
+    "tabs": {
+      "content": "Content",
+      "slider": "Slider",
+      "branding": "Branding",
+      "contacts": "Contacts",
+      "settings": "Settings"
+    }
+  }
+}

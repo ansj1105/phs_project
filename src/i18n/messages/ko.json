@@ -1,0 +1,97 @@
+{
+  "navigation": {
+    "introduction": "소개",
+    "brand": "브랜드 소개",
+    "announcements": "공지사항",
+    "contact": "연락처"
+  },
+  "hero": {
+    "slide1": {
+      "title": "정통 이탈리안 요리",
+      "description": "이탈리아의 최고급 맛을 경험해보세요"
+    },
+    "slide2": {
+      "title": "신선한 농장 재료",
+      "description": "최고의 품질을 위해 현지에서 조달"
+    },
+    "slide3": {
+      "title": "따뜻하고 환영하는 분위기",
+      "description": "가족 식사와 특별한 행사에 완벽한 장소"
+    },
+    "exploreMenu": "메뉴 보기"
+  },
+  "introduction": {
+    "title": "딜리셔스 바이츠에 오신 것을 환영합니다",
+    "content": "딜리셔스 바이츠에서는 훌륭한 음식이 사람들을 하나로 만든다고 믿습니다. 요리 우수성에 대한 우리의 열정은 최고급 재료와 전통적인 레시피를 사용하여 기억에 남는 식사 경험을 만들어냅니다. 캐주얼한 점심, 로맨틱한 저녁 식사, 또는 특별한 축하 행사를 위해 방문하시든, 따뜻하고 환영하는 분위기에서 뛰어난 음식을 제공하는 것이 우리의 약속입니다."
+  },
+  "brand": {
+    "title": "우리의 이야기",
+    "subtitle": "2015년에 설립된 딜리셔스 바이츠는 8년 넘게 정통 맛과 뛰어난 환대로 지역사회를 섬겨왔습니다.",
+    "journeyTitle": "요리 여행",
+    "journeyContent1": "작은 가족 레스토랑으로 시작된 것이 사랑받는 식사 장소로 성장했습니다. 품질, 혁신, 고객 만족에 대한 우리의 약속은 여정 내내 변하지 않았습니다.",
+    "journeyContent2": "우리는 맛있을 뿐만 아니라 전통, 창의성, 그리고 음식에 대한 사랑의 이야기를 전하는 요리를 만드는 것을 자랑스럽게 생각합니다.",
+    "features": {
+      "chefs": {
+        "title": "전문 셰프",
+        "description": "경험 많은 셰프들이 모든 요리에 열정과 창의성을 불어넣습니다"
+      },
+      "love": {
+        "title": "사랑으로 만든 음식",
+        "description": "모든 식사는 세심한 배려와 주의로 준비됩니다"
+      },
+      "quality": {
+        "title": "프리미엄 품질",
+        "description": "신뢰할 수 있는 공급업체에서 조달한 최고급 재료만을 사용합니다"
+      }
+    }
+  },
+  "announcements": {
+    "title": "최신 공지사항",
+    "subtitle": "최신 뉴스와 서비스 소식을 확인하세요",
+    "readMore": "자세히 보기",
+    "backToList": "공지사항 목록으로"
+  },
+  "contact": {
+    "title": "연락처",
+    "subtitle": "예약, 문의사항 또는 피드백을 위해 연락주세요",
+    "location": "위치",
+    "phone": "전화번호",
+    "email": "이메일",
+    "hours": "운영시간",
+    "sendMessage": "메시지 보내기",
+    "form": {
+      "name": "이름",
+      "email": "이메일",
+      "phone": "전화번호 (선택사항)",
+      "message": "메시지",
+      "send": "메시지 전송"
+    },
+    "schedule": {
+      "weekdays": "월요일 - 목요일: 오전 11:00 - 오후 10:00",
+      "weekends": "금요일 - 토요일: 오전 11:00 - 오후 11:00",
+      "sunday": "일요일: 오후 12:00 - 오후 9:00"
+    }
+  },
+  "footer": {
+    "description": "2015년부터 뛰어난 음식과 기억에 남는 식사 경험을 제공하고 있습니다.",
+    "quickLinks": "빠른 링크",
+    "contactInfo": "연락처 정보",
+    "openingHours": "운영시간",
+    "copyright": "© 2024 딜리셔스 바이츠. 모든 권리 보유."
+  },
+  "admin": {
+    "dashboard": "관리자 대시보드",
+    "subtitle": "F&B 웹사이트 콘텐츠 및 설정 관리",
+    "tabs": {
+      "content": "콘텐츠",
+      "slider": "슬라이더",
+      "branding": "브랜딩",
+      "contacts": "연락처",
+      "settings": "설정"
+    }
+  },
+  "Index": {
+    "title": "환영합니다",
+    "description": "이것은 다국어 설정 샘플입니다"
+  }
+}
