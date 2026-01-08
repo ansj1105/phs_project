@@ -9,8 +9,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Contact() {
+  const t = useTranslations("contact")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,24 +36,23 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16">
+    <section id="contact" className="py-20 bg-muted/40">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
-            <p className="text-xl text-muted-foreground">
-              Get in touch with us for reservations, inquiries, or feedback
-            </p>
+            <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("eyebrow")}</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
+            <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-6">
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <MapPin className="h-5 w-5 mr-2 text-orange-500" />
-                    Location
+                    {t("location")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -65,11 +66,11 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Phone className="h-5 w-5 mr-2 text-orange-500" />
-                    Phone
+                    {t("phone")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -77,11 +78,11 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Mail className="h-5 w-5 mr-2 text-orange-500" />
-                    Email
+                    {t("email")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -89,36 +90,36 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Clock className="h-5 w-5 mr-2 text-orange-500" />
-                    Hours
+                    {t("hours")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-muted-foreground space-y-1">
-                    <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
-                    <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
-                    <p>Sunday: 12:00 PM - 9:00 PM</p>
+                    <p>{t("schedule.weekdays")}</p>
+                    <p>{t("schedule.weekends")}</p>
+                    <p>{t("schedule.sunday")}</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
             {/* Contact Form */}
-            <Card>
+            <Card className="border-border/60 bg-white/80 shadow-sm">
               <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
+                <CardTitle>{t("sendMessage")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">{t("form.name")}</Label>
                     <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
                   </div>
                   <div>
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">{t("form.email")}</Label>
                     <Input
                       id="email"
                       name="email"
@@ -129,11 +130,11 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone">Phone (Optional)</Label>
+                    <Label htmlFor="phone">{t("form.phone")}</Label>
                     <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
                   </div>
                   <div>
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t("form.message")}</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -144,7 +145,7 @@ export function Contact() {
                     />
                   </div>
                   <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600">
-                    Send Message
+                    {t("form.send")}
                   </Button>
                 </form>
               </CardContent>

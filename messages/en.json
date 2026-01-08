@@ -3,6 +3,7 @@
     "introduction": "Introduction",
     "brand": "Brand Introduction",
     "announcements": "Announcements",
+    "gallery": "Gallery",
     "contact": "Contact Us"
   },
   "hero": {
@@ -18,18 +19,28 @@
       "title": "Warm & Welcoming Atmosphere",
       "description": "Perfect for family dining and special occasions"
     },
-    "exploreMenu": "Explore Menu"
+    "exploreMenu": "Explore Menu",
+    "visitStore": "Visit the Store"
   },
   "introduction": {
+    "eyebrow": "A franchise built on taste",
     "title": "Welcome to Delicious Bites",
-    "content": "At Delicious Bites, we believe that great food brings people together. Our passion for culinary excellence drives us to create memorable dining experiences using the finest ingredients and time-honored recipes. Whether you're joining us for a casual lunch, romantic dinner, or special celebration, we're committed to serving you exceptional food in a warm, welcoming atmosphere."
+    "content": "At Delicious Bites, we believe that great food brings people together. Our passion for culinary excellence drives us to create memorable dining experiences using the finest ingredients and time-honored recipes. Whether you're joining us for a casual lunch, romantic dinner, or special celebration, we're committed to serving you exceptional food in a warm, welcoming atmosphere.",
+    "highlightLabel": "Franchise promise",
+    "highlightValue": "Consistent quality, every location.",
+    "highlight1": "Signature recipes standardized for every branch.",
+    "highlight2": "Fresh, local sourcing with seasonal rotations.",
+    "highlight3": "Guest-first hospitality training for every team."
   },
   "brand": {
+    "eyebrow": "Our story",
     "title": "Our Story",
     "subtitle": "Founded in 2015, Delicious Bites has been serving the community with authentic flavors and exceptional hospitality for over 8 years.",
     "journeyTitle": "A Culinary Journey",
     "journeyContent1": "What started as a small family restaurant has grown into a beloved dining destination. Our commitment to quality, innovation, and customer satisfaction has remained unchanged throughout our journey.",
     "journeyContent2": "We take pride in creating dishes that not only taste amazing but also tell a story of tradition, creativity, and the love we have for food.",
+    "milestone1": "First flagship opened",
+    "milestone2": "Guests served annually",
     "features": {
       "chefs": {
         "title": "Expert Chefs",
@@ -46,12 +57,25 @@
     }
   },
   "announcements": {
+    "eyebrow": "News & updates",
     "title": "Latest Announcements",
     "subtitle": "Stay updated with our latest news and offerings",
     "readMore": "Read More",
-    "backToList": "Back to Announcements"
+    "backToList": "Back to Announcements",
+    "empty": "No updates yet. Add your first post from the admin dashboard.",
+    "badge": "Announcement",
+    "update": "Update",
+    "notFound": "Announcement not found"
+  },
+  "gallery": {
+    "eyebrow": "Signature gallery",
+    "title": "Featured Moments",
+    "subtitle": "A taste of our best sellers, interiors, and franchise moments.",
+    "tagline": "Seasonal favorites",
+    "empty": "Add gallery images from the admin dashboard to showcase your brand."
   },
   "contact": {
+    "eyebrow": "Reach us anytime",
     "title": "Contact Us",
     "subtitle": "Get in touch with us for reservations, inquiries, or feedback",
     "location": "Location",
@@ -77,7 +101,19 @@
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Info",
     "openingHours": "Opening Hours",
-    "copyright": "© 2024 Delicious Bites. All rights reserved."
+    "copyright": "© 2024 Delicious Bites. All rights reserved.",
+    "links": {
+      "introduction": "Introduction",
+      "brand": "Brand Introduction",
+      "announcements": "Announcements",
+      "gallery": "Gallery",
+      "contact": "Contact Us"
+    },
+    "schedule": {
+      "weekdays": "Mon - Thu: 11:00 AM - 10:00 PM",
+      "weekends": "Fri - Sat: 11:00 AM - 11:00 PM",
+      "sunday": "Sunday: 12:00 PM - 9:00 PM"
+    }
   },
   "admin": {
     "dashboard": "Admin Dashboard",
