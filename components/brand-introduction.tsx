@@ -39,9 +39,9 @@ export function BrandIntroduction() {
             <div className="relative">
               <div className="absolute inset-0 -z-10 rounded-3xl bg-orange-100/60 blur-2xl" />
               <img
-                src="/placeholder.svg?height=420&width=640"
-                alt="Restaurant interior"
-                className="rounded-3xl shadow-lg w-full object-cover"
+                src="/images/brand-butcher.svg"
+                alt="Butchery craftsmanship"
+                className="rounded-lg shadow-lg w-full"
               />
             </div>
             <div className="space-y-4">

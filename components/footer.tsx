@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react"
 import { useTranslations } from "next-intl"
 
@@ -11,13 +12,12 @@ export function Footer() {
     <footer className="bg-gray-950 text-white">
       <div className="container px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-9 w-9 rounded-full bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FB</span>
+              <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">YJ</span>
               </div>
-              <span className="font-bold text-xl">Delicious Bites</span>
+              <span className="font-bold text-xl">양재 정육 식당</span>
             </div>
             <p className="text-gray-400 mb-4">{t("description")}</p>
             <div className="flex space-x-4">
@@ -33,7 +33,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4">{t("quickLinks")}</h3>
             <ul className="space-y-2">
@@ -53,11 +52,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#gallery" className="text-gray-400 hover:text-orange-500">
-                  {t("links.gallery")}
-                </Link>
-              </li>
-              <li>
                 <Link href="#contact" className="text-gray-400 hover:text-orange-500">
                   {t("links.contact")}
                 </Link>
@@ -65,32 +59,30 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h3 className="font-semibold text-lg mb-4">{t("contactInfo")}</h3>
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400">
                 <MapPin className="h-4 w-4 mr-2" />
-                123 Culinary Street, Food District
+                {t("address")}
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone className="h-4 w-4 mr-2" />
-                +1 (555) 123-4567
+                {t("phone")}
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="h-4 w-4 mr-2" />
-                info@deliciousbites.com
+                {t("email")}
               </li>
             </ul>
           </div>
 
-          {/* Hours */}
           <div>
             <h3 className="font-semibold text-lg mb-4">{t("openingHours")}</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>{t("schedule.weekdays")}</li>
-              <li>{t("schedule.weekends")}</li>
-              <li>{t("schedule.sunday")}</li>
+              <li>{t("hours.weekdays")}</li>
+              <li>{t("hours.weekends")}</li>
+              <li>{t("hours.sunday")}</li>
             </ul>
           </div>
         </div>

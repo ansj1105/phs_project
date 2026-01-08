@@ -31,16 +31,12 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b border-white/40 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href={`/${locale}`} className="flex items-center space-x-2">
-          <div className="h-9 w-9 rounded-full bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center shadow-sm">
-            <span className="text-white font-bold text-sm">FB</span>
+          <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center">
+            <span className="text-white font-bold text-sm">YJ</span>
           </div>
-          <div>
-            <span className="font-bold text-xl">Delicious Bites</span>
-            <p className="text-xs text-muted-foreground">Franchise Experience</p>
-          </div>
+          <span className="font-bold text-xl">양재 정육 식당</span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             <Link
@@ -52,7 +48,6 @@ export function Navbar() {
             </Link>
           ))}
 
-          {/* Language Switcher */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="flex items-center gap-2 rounded-full bg-white/60">
@@ -67,7 +62,6 @@ export function Navbar() {
           </DropdownMenu>
         </div>
 
-        {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button variant="ghost" size="icon">
@@ -88,7 +82,6 @@ export function Navbar() {
                 </Link>
               ))}
 
-              {/* Mobile Language Switcher */}
               <div className="border-t pt-4">
                 <p className="text-sm font-medium mb-2">Language</p>
                 <div className="flex flex-col space-y-2">

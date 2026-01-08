@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -19,12 +20,11 @@ export function Contact() {
     phone: "",
     message: "",
   })
+  const t = useTranslations("contact")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
     console.log("Form submitted:", formData)
-    // Reset form
     setFormData({ name: "", email: "", phone: "", message: "" })
   }
 
@@ -40,13 +40,11 @@ export function Contact() {
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("eyebrow")}</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
-            <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
             <div className="space-y-6">
               <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
@@ -57,11 +55,9 @@ export function Contact() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    123 Culinary Street
+                    {t("details.address")}
                     <br />
-                    Food District, City 12345
-                    <br />
-                    Country
+                    {t("details.city")}
                   </p>
                 </CardContent>
               </Card>
@@ -74,7 +70,7 @@ export function Contact() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">{t("contactInfo.phoneValue")}</p>
                 </CardContent>
               </Card>
 
@@ -86,7 +82,7 @@ export function Contact() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">info@deliciousbites.com</p>
+                  <p className="text-muted-foreground">{t("contactInfo.emailValue")}</p>
                 </CardContent>
               </Card>
 
@@ -107,8 +103,7 @@ export function Contact() {
               </Card>
             </div>
 
-            {/* Contact Form */}
-            <Card className="border-border/60 bg-white/80 shadow-sm">
+            <Card>
               <CardHeader>
                 <CardTitle>{t("sendMessage")}</CardTitle>
               </CardHeader>
