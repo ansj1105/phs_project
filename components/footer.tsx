@@ -3,12 +3,13 @@
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
   const t = useTranslations("footer")
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-950 text-white">
       <div className="container px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div>

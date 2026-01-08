@@ -1,9 +1,7 @@
-"use client"
-
 import Link from "next/link"
-import { useTranslations, useLocale } from "next-intl"
+import { getLocale, getTranslations } from "next-intl/server"
+import { Calendar } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar } from "lucide-react"
 
@@ -73,17 +71,19 @@ const announcements = [
   },
 ]
 
-export function Announcements() {
-  const t = useTranslations("announcements")
-  const locale = useLocale()
+export async function Announcements() {
+  const t = await getTranslations("announcements")
+  const locale = await getLocale()
+  const posts = getPosts(6)
 
   return (
-    <section id="announcements" className="py-16 bg-muted/50">
+    <section id="announcements" className="bg-gradient-to-b from-white via-orange-50/30 to-transparent py-20">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("eyebrow")}</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
-            <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -96,25 +96,33 @@ export function Announcements() {
                     </Badge>
                     {announcement.featured && <Badge className="bg-orange-500">{t("featured")}</Badge>}
                   </div>
-                  <CardTitle className="text-xl">{announcement.title[locale as "en" | "ko"]}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">{announcement.content[locale as "en" | "ko"]}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {new Date(announcement.date).toLocaleDateString()}
+                  <CardHeader>
+                    <CardTitle className="text-xl leading-snug">{title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-sm text-muted-foreground line-clamp-3">{content}</p>
+                    <div className="flex items-center justify-between text-sm text-muted-foreground">
+                      <span className="inline-flex items-center gap-2">
+                        <Calendar className="h-4 w-4" />
+                        {new Date(post.createdAt).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US")}
+                      </span>
+                      <Link href={`/${locale}/announcements/${post.id}`}>
+                        <Button variant="outline" size="sm">
+                          {t("readMore")}
+                        </Button>
+                      </Link>
                     </div>
-                    <Link href={`/${locale}/announcements/${announcement.id}`}>
-                      <Button variant="outline" size="sm">
-                        {t("readMore")}
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
+
+          {posts.length === 0 && (
+            <div className="rounded-2xl border border-dashed border-border/70 bg-white/80 p-10 text-center text-muted-foreground">
+              {t("empty")}
+            </div>
+          )}
         </div>
       </div>
     </section>

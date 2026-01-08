@@ -17,6 +17,7 @@ export function Navbar() {
     { name: t("introduction"), href: "#introduction" },
     { name: t("brand"), href: "#brand" },
     { name: t("announcements"), href: "#announcements" },
+    { name: t("gallery"), href: "#gallery" },
     { name: t("contact"), href: "#contact" },
   ]
 
@@ -27,7 +28,7 @@ export function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav className="sticky top-0 z-50 w-full border-b border-white/40 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href={`/${locale}`} className="flex items-center space-x-2">
           <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center">
@@ -49,7 +50,7 @@ export function Navbar() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="flex items-center gap-2">
+              <Button variant="ghost" size="sm" className="flex items-center gap-2 rounded-full bg-white/60">
                 <Globe className="h-4 w-4" />
                 {locale.toUpperCase()}
               </Button>

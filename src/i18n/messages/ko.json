@@ -3,6 +3,7 @@
     "introduction": "소개",
     "brand": "브랜드 소개",
     "announcements": "공지사항",
+    "gallery": "갤러리",
     "contact": "연락처"
   },
   "hero": {
@@ -46,6 +47,7 @@
     }
   },
   "announcements": {
+    "eyebrow": "뉴스 & 업데이트",
     "title": "최신 공지사항",
     "subtitle": "새로운 메뉴와 서비스 소식을 확인하세요",
     "readMore": "자세히 보기",

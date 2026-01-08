@@ -46,7 +46,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative h-[70vh] overflow-hidden">
+    <section className="relative h-[78vh] overflow-hidden">
       {heroImages.map((image, index) => (
         <div
           key={index}
@@ -58,15 +58,40 @@ export function Hero() {
             className="h-full w-full bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${image.src})` }}
           >
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_55%)]" />
           </div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white max-w-4xl px-4">
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">{image.title}</h1>
-              <p className="text-xl md:text-2xl mb-8">{image.description}</p>
-              <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
-                {t("exploreMenu")}
-              </Button>
+            <div className="max-w-5xl px-6 text-center text-white">
+              <p className="mb-4 text-xs uppercase tracking-[0.3em] text-orange-200">Signature Franchise Dining</p>
+              <h1 className="text-4xl md:text-6xl font-semibold mb-4">{image.title}</h1>
+              <p className="text-lg md:text-2xl text-white/80 mb-8">{image.description}</p>
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <Button size="lg" className="rounded-full bg-orange-500 px-8 hover:bg-orange-600">
+                  {t("exploreMenu")}
+                </Button>
+                <Button size="lg" variant="outline" className="rounded-full border-white/40 text-white hover:bg-white/10">
+                  {t("visitStore")}
+                </Button>
+              </div>
+              <div className="mt-10 grid grid-cols-2 gap-4 rounded-3xl bg-white/10 p-6 text-left backdrop-blur md:grid-cols-4">
+                <div>
+                  <p className="text-2xl font-semibold">18+</p>
+                  <p className="text-xs text-white/70">Franchise Locations</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">4.9★</p>
+                  <p className="text-xs text-white/70">Guest Reviews</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">30</p>
+                  <p className="text-xs text-white/70">Signature Dishes</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-semibold">12h</p>
+                  <p className="text-xs text-white/70">Daily Service</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

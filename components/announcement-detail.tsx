@@ -1,6 +1,4 @@
-"use client"
-
-import { useTranslations, useLocale } from "next-intl"
+import { getLocale, getTranslations } from "next-intl/server"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -79,11 +77,10 @@ interface AnnouncementDetailProps {
   id: string
 }
 
-export function AnnouncementDetail({ id }: AnnouncementDetailProps) {
-  const t = useTranslations("announcements")
-  const locale = useLocale()
-
-  const announcement = announcements.find((a) => a.id === id)
+export async function AnnouncementDetail({ id }: AnnouncementDetailProps) {
+  const t = await getTranslations("announcements")
+  const locale = await getLocale()
+  const announcement = getPostById(Number(id))
 
   if (!announcement) {
     return (
@@ -91,7 +88,7 @@ export function AnnouncementDetail({ id }: AnnouncementDetailProps) {
         <Navbar />
         <div className="container px-4 py-16">
           <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Announcement not found</h1>
+            <h1 className="text-2xl font-bold mb-4">{t("notFound")}</h1>
             <Link href={`/${locale}`}>
               <Button>
                 <ArrowLeft className="h-4 w-4 mr-2" />
@@ -104,6 +101,10 @@ export function AnnouncementDetail({ id }: AnnouncementDetailProps) {
       </div>
     )
   }
+
+  const title = locale === "ko" ? announcement.titleKo : announcement.titleEn
+  const content = locale === "ko" ? announcement.contentKo : announcement.contentEn
+  const dateLabel = new Date(announcement.createdAt).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US")
 
   return (
     <div className="min-h-screen bg-background">
@@ -126,15 +127,20 @@ export function AnnouncementDetail({ id }: AnnouncementDetailProps) {
                 </Badge>
                 {announcement.featured && <Badge className="bg-orange-500">{t("featured")}</Badge>}
               </div>
-              <CardTitle className="text-3xl md:text-4xl mb-4">{announcement.title[locale as "en" | "ko"]}</CardTitle>
+              <CardTitle className="text-3xl md:text-4xl mb-4">{title}</CardTitle>
               <div className="flex items-center text-muted-foreground">
                 <Calendar className="h-4 w-4 mr-2" />
-                {new Date(announcement.date).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US")}
+                {dateLabel}
               </div>
             </CardHeader>
             <CardContent>
+              {announcement.imageUrl && (
+                <div className="mb-8 overflow-hidden rounded-2xl">
+                  <img src={announcement.imageUrl} alt={title} className="h-72 w-full object-cover" />
+                </div>
+              )}
               <div className="prose prose-lg max-w-none">
-                <p className="text-lg leading-relaxed">{announcement.fullContent[locale as "en" | "ko"]}</p>
+                <p className="text-lg leading-relaxed">{content}</p>
               </div>
             </CardContent>
           </Card>

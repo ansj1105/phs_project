@@ -10,8 +10,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Contact() {
+  const t = useTranslations("contact")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,7 +36,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16">
+    <section id="contact" className="py-20 bg-muted/40">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -44,7 +46,7 @@ export function Contact() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <MapPin className="h-5 w-5 mr-2 text-orange-500" />
@@ -60,7 +62,7 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Phone className="h-5 w-5 mr-2 text-orange-500" />
@@ -72,7 +74,7 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Mail className="h-5 w-5 mr-2 text-orange-500" />
@@ -84,7 +86,7 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="border-border/60 bg-white/80 shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Clock className="h-5 w-5 mr-2 text-orange-500" />
