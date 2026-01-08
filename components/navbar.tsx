@@ -14,10 +14,10 @@ export function Navbar() {
   const locale = useLocale()
 
   const navItems = [
-    { name: t("introduction"), href: "#introduction" },
-    { name: t("brand"), href: "#brand" },
-    { name: t("announcements"), href: "#announcements" },
-    { name: t("gallery"), href: "#gallery" },
+    { name: t("overview"), href: "#overview" },
+    { name: t("services"), href: "#services" },
+    { name: t("process"), href: "#process" },
+    { name: t("network"), href: "#network" },
     { name: t("contact"), href: "#contact" },
   ]
 

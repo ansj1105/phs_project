@@ -1,127 +1,72 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0)
   const t = useTranslations("hero")
 
-  const heroImages = [
+  const stats = [
     {
-      src: "/images/hero-beef-1.svg",
-      alt: "Premium beef platter",
-      title: t("slide1.title"),
-      description: t("slide1.description"),
+      value: t("stats.sitesValue"),
+      label: t("stats.sitesLabel"),
     },
     {
-      src: "/images/hero-beef-2.svg",
-      alt: "Butcher-selected beef cuts",
-      title: t("slide2.title"),
-      description: t("slide2.description"),
+      value: t("stats.partnersValue"),
+      label: t("stats.partnersLabel"),
     },
     {
-      src: "/images/hero-beef-3.svg",
-      alt: "Warm dining atmosphere",
-      title: t("slide3.title"),
-      description: t("slide3.description"),
+      value: t("stats.satisfactionValue"),
+      label: t("stats.satisfactionLabel"),
     },
   ]
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [heroImages.length])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroImages.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length)
-  }
-
   return (
-    <section className="relative h-[78vh] overflow-hidden">
-      {heroImages.map((image, index) => (
+    <section className="relative overflow-hidden bg-neutral-950 text-white">
+      <div className="absolute inset-0">
         <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div
-            className="h-full w-full bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${image.src})` }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.18),_transparent_55%)]" />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="max-w-5xl px-6 text-center text-white">
-              <p className="mb-4 text-xs uppercase tracking-[0.3em] text-orange-200">Signature Franchise Dining</p>
-              <h1 className="text-4xl md:text-6xl font-semibold mb-4">{image.title}</h1>
-              <p className="text-lg md:text-2xl text-white/80 mb-8">{image.description}</p>
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button size="lg" className="rounded-full bg-orange-500 px-8 hover:bg-orange-600">
-                  {t("exploreMenu")}
-                </Button>
-                <Button size="lg" variant="outline" className="rounded-full border-white/40 text-white hover:bg-white/10">
-                  {t("visitStore")}
-                </Button>
-              </div>
-              <div className="mt-10 grid grid-cols-2 gap-4 rounded-3xl bg-white/10 p-6 text-left backdrop-blur md:grid-cols-4">
-                <div>
-                  <p className="text-2xl font-semibold">18+</p>
-                  <p className="text-xs text-white/70">Franchise Locations</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold">4.9★</p>
-                  <p className="text-xs text-white/70">Guest Reviews</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold">30</p>
-                  <p className="text-xs text-white/70">Signature Dishes</p>
-                </div>
-                <div>
-                  <p className="text-2xl font-semibold">12h</p>
-                  <p className="text-xs text-white/70">Daily Service</p>
-                </div>
-              </div>
+          className="h-full w-full bg-cover bg-center"
+          style={{ backgroundImage: "url(/images/hero-beef-2.svg)" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_55%)]" />
+      </div>
+
+      <div className="relative">
+        <div className="container px-4 py-24 md:py-32">
+          <div className="max-w-3xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-orange-300">{t("eyebrow")}</p>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
+              {t("title")}
+            </h1>
+            <p className="mt-6 text-lg text-white/80 md:text-xl">{t("description")}</p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Button size="lg" className="rounded-full bg-orange-500 px-8 hover:bg-orange-600">
+                {t("ctaPrimary")}
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full border-white/40 text-white hover:bg-white/10"
+              >
+                {t("ctaSecondary")}
+              </Button>
             </div>
           </div>
         </div>
-      ))}
 
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
-        onClick={prevSlide}
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </Button>
-      <Button
-        variant="ghost"
-        size="icon"
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:bg-white/20"
-        onClick={nextSlide}
-      >
-        <ChevronRight className="h-6 w-6" />
-      </Button>
-
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-        {heroImages.map((_, index) => (
-          <button
-            key={index}
-            className={`h-3 w-3 rounded-full transition-colors ${index === currentSlide ? "bg-white" : "bg-white/50"}`}
-            onClick={() => setCurrentSlide(index)}
-          />
-        ))}
+        <div className="border-t border-white/10 bg-white/5 backdrop-blur">
+          <div className="container px-4 py-8">
+            <div className="grid gap-6 text-center sm:grid-cols-3">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-2xl font-semibold md:text-3xl">{stat.value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.2em] text-white/60">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
