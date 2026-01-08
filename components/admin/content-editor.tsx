@@ -9,21 +9,20 @@ import { Save } from "lucide-react"
 
 export function ContentEditor() {
   const [introText, setIntroText] = useState(
-    `At Delicious Bites, we believe that great food brings people together. Our passion for culinary excellence drives us to create memorable dining experiences using the finest ingredients and time-honored recipes. Whether you're joining us for a casual lunch, romantic dinner, or special celebration, we're committed to serving you exceptional food in a warm, welcoming atmosphere.`,
+    `양재 정육 식당은 소고기 전문 정육 노하우를 기반으로 한 F&B 서비스를 운영합니다. 엄선한 한우와 프리미엄 부위를 정성껏 손질해 최상의 식사 경험을 제공하며, 매장 다이닝뿐 아니라 행사와 기업 고객을 위한 맞춤형 메뉴 구성도 제공합니다.`,
   )
 
-  const [brandText, setBrandText] =
-    useState(`What started as a small family restaurant has grown into a beloved dining destination. Our commitment to quality, innovation, and customer satisfaction has remained unchanged throughout our journey.
+  const [brandText, setBrandText] = useState(
+    `양재 정육 식당은 정육 유통과 식자재 운영 경험을 바탕으로 고기 본연의 맛을 살리는 다이닝을 시작했습니다. 산지부터 숙성, 손질, 조리까지 전 과정을 직접 관리합니다.
 
-We take pride in creating dishes that not only taste amazing but also tell a story of tradition, creativity, and the love we have for food.`)
+고객의 취향에 맞춘 부위 추천과 최적의 익힘을 제안하여, 소고기의 진가를 가장 맛있게 즐길 수 있도록 돕습니다.`,
+  )
 
   const handleSaveIntro = () => {
-    // Handle saving introduction text
     console.log("Saving intro text:", introText)
   }
 
   const handleSaveBrand = () => {
-    // Handle saving brand text
     console.log("Saving brand text:", brandText)
   }
 

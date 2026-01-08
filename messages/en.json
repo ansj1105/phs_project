@@ -1,87 +1,110 @@
 {
   "navigation": {
     "introduction": "Introduction",
-    "brand": "Brand Introduction",
-    "announcements": "Announcements",
-    "contact": "Contact Us"
+    "brand": "Brand Story",
+    "announcements": "News",
+    "contact": "Contact"
   },
   "hero": {
     "slide1": {
-      "title": "Authentic Italian Cuisine",
-      "description": "Experience the finest flavors from Italy"
+      "title": "양재 정육 식당",
+      "description": "Premium beef dining crafted with expert butchery and thoughtful service."
     },
     "slide2": {
-      "title": "Farm Fresh Ingredients",
-      "description": "Sourced locally for the best quality"
+      "title": "Butcher-selected cuts",
+      "description": "Carefully aged and trimmed beef for deep, clean flavor."
     },
     "slide3": {
-      "title": "Warm & Welcoming Atmosphere",
-      "description": "Perfect for family dining and special occasions"
+      "title": "F&B service operations",
+      "description": "From in-house dining to catering, we deliver dependable hospitality."
     },
-    "exploreMenu": "Explore Menu"
+    "exploreMenu": "Explore the menu"
   },
   "introduction": {
-    "title": "Welcome to Delicious Bites",
-    "content": "At Delicious Bites, we believe that great food brings people together. Our passion for culinary excellence drives us to create memorable dining experiences using the finest ingredients and time-honored recipes. Whether you're joining us for a casual lunch, romantic dinner, or special celebration, we're committed to serving you exceptional food in a warm, welcoming atmosphere."
+    "title": "Welcome to 양재 정육 식당",
+    "content": "양재 정육 식당 is an F&B service brand built on professional beef butchery. We curate premium Korean beef, prepare every cut with care, and serve a refined dining experience. We also offer tailored menus for events and corporate clients."
   },
   "brand": {
-    "title": "Our Story",
-    "subtitle": "Founded in 2015, Delicious Bites has been serving the community with authentic flavors and exceptional hospitality for over 8 years.",
-    "journeyTitle": "A Culinary Journey",
-    "journeyContent1": "What started as a small family restaurant has grown into a beloved dining destination. Our commitment to quality, innovation, and customer satisfaction has remained unchanged throughout our journey.",
-    "journeyContent2": "We take pride in creating dishes that not only taste amazing but also tell a story of tradition, creativity, and the love we have for food.",
+    "title": "Dining shaped by butchery expertise",
+    "subtitle": "Expert cut selection and chef-driven preparation come together for unforgettable beef flavor.",
+    "journeyTitle": "Our journey",
+    "journeyContent1": "Built on years of beef sourcing and distribution experience, 양재 정육 식당 manages every step from origin to aging, trimming, and cooking.",
+    "journeyContent2": "We guide guests to the right cuts and ideal doneness so every meal highlights the true character of premium beef.",
     "features": {
       "chefs": {
-        "title": "Expert Chefs",
-        "description": "Our experienced chefs bring passion and creativity to every dish"
+        "title": "Butcher & chef collaboration",
+        "description": "Butchery experts and chefs co-create each menu."
       },
       "love": {
-        "title": "Made with Love",
-        "description": "Every meal is prepared with care and attention to detail"
+        "title": "Warm hospitality",
+        "description": "Attentive service ensures a comfortable dining experience."
       },
       "quality": {
-        "title": "Premium Quality",
-        "description": "We use only the finest ingredients sourced from trusted suppliers"
+        "title": "Premium beef",
+        "description": "Only top-grade Korean beef from trusted partners."
       }
     }
   },
   "announcements": {
-    "title": "Latest Announcements",
-    "subtitle": "Stay updated with our latest news and offerings",
-    "readMore": "Read More",
-    "backToList": "Back to Announcements"
+    "title": "Latest announcements",
+    "subtitle": "Check new menus and service updates.",
+    "readMore": "Read more",
+    "backToList": "Back to announcements",
+    "featured": "Featured"
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch with us for reservations, inquiries, or feedback",
+    "title": "Contact us",
+    "subtitle": "Reach out for reservations or catering inquiries.",
     "location": "Location",
     "phone": "Phone",
     "email": "Email",
     "hours": "Hours",
-    "sendMessage": "Send us a Message",
+    "sendMessage": "Send a message",
     "form": {
       "name": "Name",
       "email": "Email",
       "phone": "Phone (Optional)",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Send message"
     },
     "schedule": {
-      "weekdays": "Monday - Thursday: 11:00 AM - 10:00 PM",
-      "weekends": "Friday - Saturday: 11:00 AM - 11:00 PM",
+      "weekdays": "Mon - Thu: 11:00 AM - 10:00 PM",
+      "weekends": "Fri - Sat: 11:00 AM - 11:00 PM",
       "sunday": "Sunday: 12:00 PM - 9:00 PM"
+    },
+    "details": {
+      "address": "123 Yangjae-ro, Gangnam-gu",
+      "city": "Yangjae-dong, Seoul"
+    },
+    "contactInfo": {
+      "phoneValue": "+82 2-555-4287",
+      "emailValue": "reservation@yangjae-meat.kr"
     }
   },
   "footer": {
-    "description": "Serving exceptional food and creating memorable dining experiences since 2015.",
-    "quickLinks": "Quick Links",
-    "contactInfo": "Contact Info",
-    "openingHours": "Opening Hours",
-    "copyright": "© 2024 Delicious Bites. All rights reserved."
+    "description": "Premium beef dining and F&B services crafted with butchery expertise.",
+    "quickLinks": "Quick links",
+    "contactInfo": "Contact info",
+    "openingHours": "Opening hours",
+    "copyright": "© 2024 양재 정육 식당. All rights reserved.",
+    "links": {
+      "introduction": "Introduction",
+      "brand": "Brand story",
+      "announcements": "Announcements",
+      "contact": "Contact"
+    },
+    "address": "123 Yangjae-ro, Gangnam-gu",
+    "phone": "+82 2-555-4287",
+    "email": "reservation@yangjae-meat.kr",
+    "hours": {
+      "weekdays": "Mon - Thu: 11:00 AM - 10:00 PM",
+      "weekends": "Fri - Sat: 11:00 AM - 11:00 PM",
+      "sunday": "Sunday: 12:00 PM - 9:00 PM"
+    }
   },
   "admin": {
-    "dashboard": "Admin Dashboard",
-    "subtitle": "Manage your F&B website content and settings",
+    "dashboard": "Admin dashboard",
+    "subtitle": "Manage content and settings for 양재 정육 식당 F&B services",
     "tabs": {
       "content": "Content",
       "slider": "Slider",

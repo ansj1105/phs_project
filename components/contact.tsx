@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -17,12 +18,11 @@ export function Contact() {
     phone: "",
     message: "",
   })
+  const t = useTranslations("contact")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
     console.log("Form submitted:", formData)
-    // Reset form
     setFormData({ name: "", email: "", phone: "", message: "" })
   }
 
@@ -38,29 +38,24 @@ export function Contact() {
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
-            <p className="text-xl text-muted-foreground">
-              Get in touch with us for reservations, inquiries, or feedback
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
+            <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
             <div className="space-y-6">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <MapPin className="h-5 w-5 mr-2 text-orange-500" />
-                    Location
+                    {t("location")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    123 Culinary Street
+                    {t("details.address")}
                     <br />
-                    Food District, City 12345
-                    <br />
-                    Country
+                    {t("details.city")}
                   </p>
                 </CardContent>
               </Card>
@@ -69,11 +64,11 @@ export function Contact() {
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Phone className="h-5 w-5 mr-2 text-orange-500" />
-                    Phone
+                    {t("phone")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">{t("contactInfo.phoneValue")}</p>
                 </CardContent>
               </Card>
 
@@ -81,11 +76,11 @@ export function Contact() {
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Mail className="h-5 w-5 mr-2 text-orange-500" />
-                    Email
+                    {t("email")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">info@deliciousbites.com</p>
+                  <p className="text-muted-foreground">{t("contactInfo.emailValue")}</p>
                 </CardContent>
               </Card>
 
@@ -93,32 +88,31 @@ export function Contact() {
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <Clock className="h-5 w-5 mr-2 text-orange-500" />
-                    Hours
+                    {t("hours")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-muted-foreground space-y-1">
-                    <p>Monday - Thursday: 11:00 AM - 10:00 PM</p>
-                    <p>Friday - Saturday: 11:00 AM - 11:00 PM</p>
-                    <p>Sunday: 12:00 PM - 9:00 PM</p>
+                    <p>{t("schedule.weekdays")}</p>
+                    <p>{t("schedule.weekends")}</p>
+                    <p>{t("schedule.sunday")}</p>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Contact Form */}
             <Card>
               <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
+                <CardTitle>{t("sendMessage")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">{t("form.name")}</Label>
                     <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
                   </div>
                   <div>
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">{t("form.email")}</Label>
                     <Input
                       id="email"
                       name="email"
@@ -129,11 +123,11 @@ export function Contact() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone">Phone (Optional)</Label>
+                    <Label htmlFor="phone">{t("form.phone")}</Label>
                     <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
                   </div>
                   <div>
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t("form.message")}</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -144,7 +138,7 @@ export function Contact() {
                     />
                   </div>
                   <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600">
-                    Send Message
+                    {t("form.send")}
                   </Button>
                 </form>
               </CardContent>

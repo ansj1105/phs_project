@@ -1,0 +1,23 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B1A18" />
+      <stop offset="60%" stop-color="#4D2B1A" />
+      <stop offset="100%" stop-color="#C9875C" />
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C4A2A" />
+      <stop offset="100%" stop-color="#B06A3A" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg2)" />
+  <rect x="120" y="150" width="640" height="320" rx="36" fill="url(#board)" />
+  <rect x="180" y="210" width="200" height="120" rx="24" fill="#F2C9B5" />
+  <rect x="420" y="210" width="260" height="120" rx="24" fill="#F7D8C9" />
+  <rect x="250" y="360" width="220" height="70" rx="24" fill="#F4C3AD" />
+  <circle cx="950" cy="180" r="110" fill="#F2BFA1" opacity="0.25" />
+  <circle cx="1020" cy="420" r="140" fill="#F7D3BC" opacity="0.2" />
+  <path d="M210 260C250 235 300 225 360 235" stroke="#A04B3A" stroke-width="6" stroke-linecap="round" />
+  <path d="M460 260C520 235 590 230 660 250" stroke="#A04B3A" stroke-width="6" stroke-linecap="round" />
+  <text x="820" y="330" font-family="'Pretendard', 'Arial', sans-serif" font-size="42" fill="white" opacity="0.9">Butcher Selection</text>
+</svg>

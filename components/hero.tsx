@@ -11,20 +11,20 @@ export function Hero() {
 
   const heroImages = [
     {
-      src: "/placeholder.svg?height=600&width=1200",
-      alt: "Delicious pasta dish",
+      src: "/images/hero-beef-1.svg",
+      alt: "Premium beef platter",
       title: t("slide1.title"),
       description: t("slide1.description"),
     },
     {
-      src: "/placeholder.svg?height=600&width=1200",
-      alt: "Fresh ingredients",
+      src: "/images/hero-beef-2.svg",
+      alt: "Butcher-selected beef cuts",
       title: t("slide2.title"),
       description: t("slide2.description"),
     },
     {
-      src: "/placeholder.svg?height=600&width=1200",
-      alt: "Cozy restaurant interior",
+      src: "/images/hero-beef-3.svg",
+      alt: "Warm dining atmosphere",
       title: t("slide3.title"),
       description: t("slide3.description"),
     },
@@ -72,7 +72,6 @@ export function Hero() {
         </div>
       ))}
 
-      {/* Navigation Buttons */}
       <Button
         variant="ghost"
         size="icon"
@@ -90,7 +89,6 @@ export function Hero() {
         <ChevronRight className="h-6 w-6" />
       </Button>
 
-      {/* Dots Indicator */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
         {heroImages.map((_, index) => (
           <button

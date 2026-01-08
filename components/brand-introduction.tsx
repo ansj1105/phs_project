@@ -37,8 +37,8 @@ export function BrandIntroduction() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             <div>
               <img
-                src="/placeholder.svg?height=400&width=600"
-                alt="Restaurant interior"
+                src="/images/brand-butcher.svg"
+                alt="Butchery craftsmanship"
                 className="rounded-lg shadow-lg w-full"
               />
             </div>
