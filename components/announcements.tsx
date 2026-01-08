@@ -3,7 +3,7 @@ import { getLocale, getTranslations } from "next-intl/server"
 import { Calendar } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
 const announcements = [
   {
@@ -74,7 +74,6 @@ const announcements = [
 export async function Announcements() {
   const t = await getTranslations("announcements")
   const locale = await getLocale()
-  const posts = getPosts(6)
 
   return (
     <section id="announcements" className="bg-gradient-to-b from-white via-orange-50/30 to-transparent py-20">
@@ -87,16 +86,20 @@ export async function Announcements() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {announcements.map((announcement) => (
-              <Card key={announcement.id} className={announcement.featured ? "ring-2 ring-orange-500" : ""}>
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant={announcement.featured ? "default" : "secondary"}>
-                      {announcement.type[locale as "en" | "ko"]}
-                    </Badge>
-                    {announcement.featured && <Badge className="bg-orange-500">{t("featured")}</Badge>}
-                  </div>
+            {announcements.map((announcement) => {
+              const title = announcement.title[locale as "en" | "ko"]
+              const content = announcement.content[locale as "en" | "ko"]
+              const type = announcement.type[locale as "en" | "ko"]
+
+              return (
+                <Card key={announcement.id} className={announcement.featured ? "ring-2 ring-orange-500" : ""}>
                   <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant={announcement.featured ? "default" : "secondary"}>
+                        {type}
+                      </Badge>
+                      {announcement.featured && <Badge className="bg-orange-500">{t("featured")}</Badge>}
+                    </div>
                     <CardTitle className="text-xl leading-snug">{title}</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -104,9 +107,9 @@ export async function Announcements() {
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                       <span className="inline-flex items-center gap-2">
                         <Calendar className="h-4 w-4" />
-                        {new Date(post.createdAt).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US")}
+                        {new Date(announcement.date).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US")}
                       </span>
-                      <Link href={`/${locale}/announcements/${post.id}`}>
+                      <Link href={`/${locale}/announcements/${announcement.id}`}>
                         <Button variant="outline" size="sm">
                           {t("readMore")}
                         </Button>
@@ -118,7 +121,7 @@ export async function Announcements() {
             })}
           </div>
 
-          {posts.length === 0 && (
+          {announcements.length === 0 && (
             <div className="rounded-2xl border border-dashed border-border/70 bg-white/80 p-10 text-center text-muted-foreground">
               {t("empty")}
             </div>

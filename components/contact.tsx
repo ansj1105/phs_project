@@ -10,7 +10,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
-import { useTranslations } from "next-intl"
 
 export function Contact() {
   const t = useTranslations("contact")
@@ -20,7 +19,6 @@ export function Contact() {
     phone: "",
     message: "",
   })
-  const t = useTranslations("contact")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
