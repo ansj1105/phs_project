@@ -36,18 +36,23 @@ export function Footer() {
             <h3 className="font-semibold text-lg mb-4">{t("quickLinks")}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#introduction" className="text-gray-400 hover:text-orange-500">
-                  {t("links.introduction")}
+                <Link href="#overview" className="text-gray-400 hover:text-orange-500">
+                  {t("links.overview")}
                 </Link>
               </li>
               <li>
-                <Link href="#brand" className="text-gray-400 hover:text-orange-500">
-                  {t("links.brand")}
+                <Link href="#services" className="text-gray-400 hover:text-orange-500">
+                  {t("links.services")}
                 </Link>
               </li>
               <li>
-                <Link href="#announcements" className="text-gray-400 hover:text-orange-500">
-                  {t("links.announcements")}
+                <Link href="#process" className="text-gray-400 hover:text-orange-500">
+                  {t("links.process")}
+                </Link>
+              </li>
+              <li>
+                <Link href="#network" className="text-gray-400 hover:text-orange-500">
+                  {t("links.network")}
                 </Link>
               </li>
               <li>

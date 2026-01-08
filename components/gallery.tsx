@@ -1,13 +1,35 @@
-import { getLocale, getTranslations } from "next-intl/server"
-import { getGalleryItems } from "@/lib/db"
+import { getTranslations } from "next-intl/server"
+import { MapPinned, ShieldCheck, Sparkles, Truck } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
 export async function Gallery() {
-  const t = await getTranslations("gallery")
-  const locale = await getLocale()
-  const items = getGalleryItems(8)
+  const t = await getTranslations("network")
+
+  const items = [
+    {
+      icon: MapPinned,
+      title: t("items.coverage.title"),
+      description: t("items.coverage.description"),
+    },
+    {
+      icon: Truck,
+      title: t("items.logistics.title"),
+      description: t("items.logistics.description"),
+    },
+    {
+      icon: ShieldCheck,
+      title: t("items.quality.title"),
+      description: t("items.quality.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("items.training.title"),
+      description: t("items.training.description"),
+    },
+  ]
 
   return (
-    <section id="gallery" className="py-20">
+    <section id="network" className="py-20 bg-muted/40">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -16,35 +38,21 @@ export async function Gallery() {
             <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
           </div>
 
-          {items.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-border/70 bg-muted/40 p-10 text-center text-muted-foreground">
-              {t("empty")}
-            </div>
-          ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-              {items.map((item) => {
-                const caption = locale === "ko" ? item.captionKo : item.captionEn
-                return (
-                  <div
-                    key={item.id}
-                    className="group overflow-hidden rounded-2xl border border-border/60 bg-white/70 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    <div className="relative h-48 w-full overflow-hidden bg-muted">
-                      <img
-                        src={item.imageUrl}
-                        alt={caption}
-                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-4">
-                      <p className="text-sm font-semibold">{caption}</p>
-                      <p className="text-xs text-muted-foreground">{t("tagline")}</p>
-                    </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {items.map((item) => (
+              <Card key={item.title} className="border-border/60 bg-white/80 shadow-sm">
+                <CardContent className="p-6 flex gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-orange-500">
+                    <item.icon className="h-6 w-6" />
                   </div>
-                )
-              })}
-            </div>
-          )}
+                  <div>
+                    <h3 className="text-lg font-semibold">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

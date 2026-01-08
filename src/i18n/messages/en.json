@@ -1,64 +1,154 @@
 {
   "navigation": {
-    "introduction": "Introduction",
-    "brand": "Brand Story",
-    "announcements": "News",
+    "overview": "Overview",
+    "services": "Services",
+    "process": "Process",
+    "network": "Network",
     "contact": "Contact"
   },
   "hero": {
-    "slide1": {
-      "title": "양재 정육 식당",
-      "description": "Premium beef dining crafted with expert butchery and thoughtful service."
-    },
-    "slide2": {
-      "title": "Butcher-selected cuts",
-      "description": "Carefully aged and trimmed beef for deep, clean flavor."
-    },
-    "slide3": {
-      "title": "F&B service operations",
-      "description": "From in-house dining to catering, we deliver dependable hospitality."
-    },
-    "exploreMenu": "Explore the menu"
+    "eyebrow": "Dongwon F&B Services",
+    "title": "Integrated Food Service Operations",
+    "description": "Delivering premium dining, logistics, and franchise management with a focus on quality and consistency.",
+    "ctaPrimary": "Explore services",
+    "ctaSecondary": "Partner with us",
+    "stats": {
+      "sitesValue": "120+",
+      "sitesLabel": "Operating Sites",
+      "partnersValue": "250+",
+      "partnersLabel": "Business Partners",
+      "satisfactionValue": "98%",
+      "satisfactionLabel": "Client Satisfaction"
+    }
   },
   "introduction": {
-    "title": "Welcome to 양재 정육 식당",
-    "content": "양재 정육 식당 is an F&B service brand built on professional beef butchery. We curate premium Korean beef, prepare every cut with care, and serve a refined dining experience. We also offer tailored menus for events and corporate clients."
-  },
-  "brand": {
-    "title": "Dining shaped by butchery expertise",
-    "subtitle": "Expert cut selection and chef-driven preparation come together for unforgettable beef flavor.",
-    "journeyTitle": "Our journey",
-    "journeyContent1": "Built on years of beef sourcing and distribution experience, 양재 정육 식당 manages every step from origin to aging, trimming, and cooking.",
-    "journeyContent2": "We guide guests to the right cuts and ideal doneness so every meal highlights the true character of premium beef.",
-    "features": {
-      "chefs": {
-        "title": "Butcher & chef collaboration",
-        "description": "Butchery experts and chefs co-create each menu."
-      },
-      "love": {
-        "title": "Warm hospitality",
-        "description": "Attentive service ensures a comfortable dining experience."
-      },
-      "quality": {
-        "title": "Premium beef",
-        "description": "Only top-grade Korean beef from trusted partners."
+    "eyebrow": "Company Overview",
+    "title": "Trusted partner for food service excellence",
+    "content": "We provide comprehensive F&B services spanning dining operations, logistics, and franchise support. Our integrated system ensures stable supply, on-site execution, and brand consistency across every location.",
+    "points": {
+      "one": "Centralized sourcing and quality control for every menu line.",
+      "two": "On-site operations teams trained to deliver consistent guest experiences.",
+      "three": "Flexible service models for corporate, campus, and hospitality partners."
+    },
+    "metrics": {
+      "experienceValue": "20 yrs",
+      "experienceLabel": "Industry Experience",
+      "capacityValue": "24/7",
+      "capacityLabel": "Operations Coverage",
+      "menuValue": "300+",
+      "menuLabel": "Menus Managed"
+    },
+    "panel": {
+      "eyebrow": "Service Highlights",
+      "title": "What sets us apart",
+      "description": "We align strategy, manpower, and supply to keep every site performing at its best.",
+      "items": {
+        "one": {
+          "title": "Supply chain stability",
+          "description": "Cold-chain logistics and sourcing partnerships built for scale."
+        },
+        "two": {
+          "title": "Operational governance",
+          "description": "Performance dashboards and audits for quality, safety, and cost control."
+        },
+        "three": {
+          "title": "Customized concepts",
+          "description": "Concept development tailored to each customer segment and location."
+        }
       }
     }
   },
-  "announcements": {
-    "title": "Latest announcements",
-    "subtitle": "Check new menus and service updates.",
-    "readMore": "Read more",
-    "backToList": "Back to announcements",
-    "featured": "Featured"
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Tailored food service solutions",
+    "subtitle": "From premium dining to logistics and franchise operations, we deliver end-to-end solutions.",
+    "imageAlt": "Food service operations",
+    "items": {
+      "dining": {
+        "title": "Dining operations",
+        "description": "Full-service dining management for corporate and hospitality clients."
+      },
+      "distribution": {
+        "title": "Distribution & logistics",
+        "description": "Temperature-controlled supply networks ensuring reliable delivery."
+      },
+      "franchise": {
+        "title": "Franchise support",
+        "description": "Brand development, training, and day-to-day operational oversight."
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "Business diagnostics, menu planning, and cost optimization consulting."
+      }
+    },
+    "pillars": {
+      "quality": {
+        "title": "Quality assurance",
+        "description": "Rigorous sourcing, HACCP compliance, and continuous improvement."
+      },
+      "operations": {
+        "title": "Operational excellence",
+        "description": "Standardized playbooks and staffing models for every site."
+      },
+      "support": {
+        "title": "Partner support",
+        "description": "Dedicated account teams supporting daily performance."
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Service Process",
+    "title": "How we work",
+    "subtitle": "A structured roadmap to deliver consistent, scalable operations.",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Assess needs, locations, and brand requirements."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Design menus, staffing models, and logistics pathways."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "Deploy teams, systems, and quality checks on site."
+      },
+      "growth": {
+        "title": "Optimization",
+        "description": "Continuous monitoring and improvement for sustainable growth."
+      }
+    }
+  },
+  "network": {
+    "eyebrow": "Operations Network",
+    "title": "Scale with confidence",
+    "subtitle": "We maintain robust operations across logistics, training, and compliance.",
+    "items": {
+      "coverage": {
+        "title": "Nationwide coverage",
+        "description": "Multi-region operations and partner sites supported daily."
+      },
+      "logistics": {
+        "title": "Cold-chain logistics",
+        "description": "Certified storage and delivery systems for fresh supply."
+      },
+      "quality": {
+        "title": "Quality control",
+        "description": "Audits, certifications, and taste panels to maintain standards."
+      },
+      "training": {
+        "title": "Team training",
+        "description": "Structured onboarding and service academies for staff."
+      }
+    }
   },
   "contact": {
     "title": "Contact us",
-    "subtitle": "Reach out for reservations or catering inquiries.",
-    "location": "Location",
+    "subtitle": "Reach out for partnership or service inquiries.",
+    "location": "Headquarters",
     "phone": "Phone",
     "email": "Email",
-    "hours": "Hours",
+    "hours": "Business hours",
     "sendMessage": "Send a message",
     "form": {
       "name": "Name",
@@ -68,39 +158,49 @@
       "send": "Send message"
     },
     "schedule": {
-      "weekdays": "Mon - Thu: 11:00 AM - 10:00 PM",
-      "weekends": "Fri - Sat: 11:00 AM - 11:00 PM",
-      "sunday": "Sunday: 12:00 PM - 9:00 PM"
+      "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
+      "weekends": "Saturday: 9:00 AM - 1:00 PM",
+      "sunday": "Sunday: Closed"
     },
     "details": {
-      "address": "123 Yangjae-ro, Gangnam-gu",
-      "city": "Yangjae-dong, Seoul"
+      "address": "214 Teheran-ro, Gangnam-gu",
+      "city": "Seoul, South Korea"
     },
     "contactInfo": {
-      "phoneValue": "+82 2-555-4287",
-      "emailValue": "reservation@yangjae-meat.kr"
+      "phoneValue": "+82 2-1234-5678",
+      "emailValue": "fnb@yangjae-meat.kr"
     }
   },
   "footer": {
-    "description": "Premium beef dining and F&B services crafted with butchery expertise.",
+    "description": "Integrated food service operations delivering quality, safety, and consistency.",
     "quickLinks": "Quick links",
     "contactInfo": "Contact info",
-    "openingHours": "Opening hours",
+    "openingHours": "Business hours",
     "copyright": "© 2024 양재 정육 식당. All rights reserved.",
     "links": {
-      "introduction": "Introduction",
-      "brand": "Brand story",
-      "announcements": "Announcements",
+      "overview": "Overview",
+      "services": "Services",
+      "process": "Process",
+      "network": "Network",
       "contact": "Contact"
     },
-    "address": "123 Yangjae-ro, Gangnam-gu",
-    "phone": "+82 2-555-4287",
-    "email": "reservation@yangjae-meat.kr",
+    "address": "214 Teheran-ro, Gangnam-gu",
+    "phone": "+82 2-1234-5678",
+    "email": "fnb@yangjae-meat.kr",
     "hours": {
-      "weekdays": "Mon - Thu: 11:00 AM - 10:00 PM",
-      "weekends": "Fri - Sat: 11:00 AM - 11:00 PM",
-      "sunday": "Sunday: 12:00 PM - 9:00 PM"
+      "weekdays": "Mon - Fri: 9:00 AM - 6:00 PM",
+      "weekends": "Saturday: 9:00 AM - 1:00 PM",
+      "sunday": "Sunday: Closed"
     }
+  },
+  "announcements": {
+    "eyebrow": "News & Updates",
+    "title": "Latest announcements",
+    "subtitle": "Check new menus and service updates.",
+    "readMore": "Read more",
+    "backToList": "Back to process",
+    "featured": "Featured",
+    "notFound": "Announcement not found"
   },
   "admin": {
     "dashboard": "Admin dashboard",

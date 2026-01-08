@@ -2,31 +2,36 @@
 
 import { useTranslations } from "next-intl"
 import { Card, CardContent } from "@/components/ui/card"
-import { ChefHat, Heart, Star } from "lucide-react"
+import { ClipboardList, Store, Truck, UtensilsCrossed } from "lucide-react"
 
 export function BrandIntroduction() {
-  const t = useTranslations("brand")
+  const t = useTranslations("services")
 
   const features = [
     {
-      icon: ChefHat,
-      title: t("features.chefs.title"),
-      description: t("features.chefs.description"),
+      icon: UtensilsCrossed,
+      title: t("items.dining.title"),
+      description: t("items.dining.description"),
     },
     {
-      icon: Heart,
-      title: t("features.love.title"),
-      description: t("features.love.description"),
+      icon: Truck,
+      title: t("items.distribution.title"),
+      description: t("items.distribution.description"),
     },
     {
-      icon: Star,
-      title: t("features.quality.title"),
-      description: t("features.quality.description"),
+      icon: Store,
+      title: t("items.franchise.title"),
+      description: t("items.franchise.description"),
+    },
+    {
+      icon: ClipboardList,
+      title: t("items.consulting.title"),
+      description: t("items.consulting.description"),
     },
   ]
 
   return (
-    <section id="brand" className="py-20">
+    <section id="services" className="py-20">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -35,42 +40,41 @@ export function BrandIntroduction() {
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">{t("subtitle")}</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+          <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center mb-12">
             <div className="relative">
               <div className="absolute inset-0 -z-10 rounded-3xl bg-orange-100/60 blur-2xl" />
               <img
                 src="/images/brand-butcher.svg"
-                alt="Butchery craftsmanship"
-                className="rounded-lg shadow-lg w-full"
+                alt={t("imageAlt")}
+                className="rounded-3xl shadow-lg w-full"
               />
             </div>
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold">{t("journeyTitle")}</h3>
-              <p className="text-muted-foreground">{t("journeyContent1")}</p>
-              <p className="text-muted-foreground">{t("journeyContent2")}</p>
-              <div className="grid grid-cols-2 gap-4 pt-4 text-sm">
-                <div className="rounded-2xl border border-border/60 bg-white/80 p-4">
-                  <p className="text-xl font-semibold">2015</p>
-                  <p className="text-muted-foreground">{t("milestone1")}</p>
-                </div>
-                <div className="rounded-2xl border border-border/60 bg-white/80 p-4">
-                  <p className="text-xl font-semibold">8K+</p>
-                  <p className="text-muted-foreground">{t("milestone2")}</p>
-                </div>
-              </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {features.map((feature) => (
+                <Card key={feature.title} className="border-border/60 bg-white/80 shadow-sm">
+                  <CardContent className="p-6 space-y-3">
+                    <feature.icon className="h-10 w-10 text-orange-500" />
+                    <h3 className="text-lg font-semibold">{feature.title}</h3>
+                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-border/60 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                <CardContent className="p-6 text-center">
-                  <feature.icon className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                  <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-2xl border border-border/60 bg-muted/20 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("pillars.quality.title")}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{t("pillars.quality.description")}</p>
+            </div>
+            <div className="rounded-2xl border border-border/60 bg-muted/20 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("pillars.operations.title")}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{t("pillars.operations.description")}</p>
+            </div>
+            <div className="rounded-2xl border border-border/60 bg-muted/20 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("pillars.support.title")}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{t("pillars.support.description")}</p>
+            </div>
           </div>
         </div>
       </div>
