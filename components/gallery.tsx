@@ -29,25 +29,28 @@ export async function Gallery() {
   ]
 
   return (
-    <section id="network" className="py-20 bg-muted/40">
+    <section id="network" className="py-24 bg-slate-950">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-orange-500">{t("eyebrow")}</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">{t("eyebrow")}</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
-            <p className="text-lg text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-lg text-white/70">{t("subtitle")}</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {items.map((item) => (
-              <Card key={item.title} className="border-border/60 bg-white/80 shadow-sm">
+              <Card
+                key={item.title}
+                className="border-white/10 bg-white/5 text-white shadow-[0_0_30px_rgba(59,130,246,0.12)]"
+              >
                 <CardContent className="p-6 flex gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-50 text-orange-500">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-300">
                     <item.icon className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                    <p className="text-sm text-white/70 mt-2">{item.description}</p>
                   </div>
                 </CardContent>
               </Card>

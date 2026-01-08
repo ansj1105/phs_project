@@ -34,25 +34,25 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-muted/40">
+    <section id="contact" className="py-24 bg-slate-950">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("title")}</h2>
-            <p className="text-xl text-muted-foreground">{t("subtitle")}</p>
+            <p className="text-xl text-white/70">{t("subtitle")}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <Card className="border-border/60 bg-white/80 shadow-sm">
+              <Card className="border-white/10 bg-white/5 text-white shadow-[0_0_30px_rgba(59,130,246,0.12)]">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <MapPin className="h-5 w-5 mr-2 text-orange-500" />
+                    <MapPin className="h-5 w-5 mr-2 text-cyan-300" />
                     {t("location")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
+                  <p className="text-white/70">
                     {t("details.address")}
                     <br />
                     {t("details.city")}
@@ -60,39 +60,39 @@ export function Contact() {
                 </CardContent>
               </Card>
 
-              <Card className="border-border/60 bg-white/80 shadow-sm">
+              <Card className="border-white/10 bg-white/5 text-white shadow-[0_0_30px_rgba(59,130,246,0.12)]">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <Phone className="h-5 w-5 mr-2 text-orange-500" />
+                    <Phone className="h-5 w-5 mr-2 text-cyan-300" />
                     {t("phone")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{t("contactInfo.phoneValue")}</p>
+                  <p className="text-white/70">{t("contactInfo.phoneValue")}</p>
                 </CardContent>
               </Card>
 
-              <Card className="border-border/60 bg-white/80 shadow-sm">
+              <Card className="border-white/10 bg-white/5 text-white shadow-[0_0_30px_rgba(59,130,246,0.12)]">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <Mail className="h-5 w-5 mr-2 text-orange-500" />
+                    <Mail className="h-5 w-5 mr-2 text-cyan-300" />
                     {t("email")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{t("contactInfo.emailValue")}</p>
+                  <p className="text-white/70">{t("contactInfo.emailValue")}</p>
                 </CardContent>
               </Card>
 
-              <Card className="border-border/60 bg-white/80 shadow-sm">
+              <Card className="border-white/10 bg-white/5 text-white shadow-[0_0_30px_rgba(59,130,246,0.12)]">
                 <CardHeader>
                   <CardTitle className="flex items-center">
-                    <Clock className="h-5 w-5 mr-2 text-orange-500" />
+                    <Clock className="h-5 w-5 mr-2 text-cyan-300" />
                     {t("hours")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-muted-foreground space-y-1">
+                  <div className="text-white/70 space-y-1">
                     <p>{t("schedule.weekdays")}</p>
                     <p>{t("schedule.weekends")}</p>
                     <p>{t("schedule.sunday")}</p>
@@ -101,43 +101,67 @@ export function Contact() {
               </Card>
             </div>
 
-            <Card>
+            <Card className="border-white/10 bg-white/5 text-white shadow-[0_0_30px_rgba(59,130,246,0.12)]">
               <CardHeader>
                 <CardTitle>{t("sendMessage")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Label htmlFor="name">{t("form.name")}</Label>
-                    <Input id="name" name="name" value={formData.name} onChange={handleChange} required />
+                    <Label htmlFor="name" className="text-white/80">
+                      {t("form.name")}
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="border-white/10 bg-white/5 text-white placeholder:text-white/40 focus-visible:border-white/50"
+                      required
+                    />
                   </div>
                   <div>
-                    <Label htmlFor="email">{t("form.email")}</Label>
+                    <Label htmlFor="email" className="text-white/80">
+                      {t("form.email")}
+                    </Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
+                      className="border-white/10 bg-white/5 text-white placeholder:text-white/40 focus-visible:border-white/50"
                       required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone">{t("form.phone")}</Label>
-                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} />
+                    <Label htmlFor="phone" className="text-white/80">
+                      {t("form.phone")}
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="border-white/10 bg-white/5 text-white placeholder:text-white/40 focus-visible:border-white/50"
+                    />
                   </div>
                   <div>
-                    <Label htmlFor="message">{t("form.message")}</Label>
+                    <Label htmlFor="message" className="text-white/80">
+                      {t("form.message")}
+                    </Label>
                     <Textarea
                       id="message"
                       name="message"
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
+                      className="border-white/10 bg-white/5 text-white placeholder:text-white/40 focus-visible:border-white/50"
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600">
+                  <Button type="submit" className="w-full">
                     {t("form.send")}
                   </Button>
                 </form>
