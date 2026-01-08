@@ -1,22 +1,25 @@
+"use client"
+
 import Link from "next/link"
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+  const t = useTranslations("footer")
+
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-950 text-white">
       <div className="container px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="h-8 w-8 rounded-full bg-orange-500 flex items-center justify-center">
+              <div className="h-9 w-9 rounded-full bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">FB</span>
               </div>
               <span className="font-bold text-xl">Delicious Bites</span>
             </div>
-            <p className="text-gray-400 mb-4">
-              Serving exceptional food and creating memorable dining experiences since 2015.
-            </p>
+            <p className="text-gray-400 mb-4">{t("description")}</p>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-400 hover:text-orange-500">
                 <Facebook className="h-5 w-5" />
@@ -32,26 +35,31 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("quickLinks")}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="#introduction" className="text-gray-400 hover:text-orange-500">
-                  Introduction
+                  {t("links.introduction")}
                 </Link>
               </li>
               <li>
                 <Link href="#brand" className="text-gray-400 hover:text-orange-500">
-                  Brand Introduction
+                  {t("links.brand")}
                 </Link>
               </li>
               <li>
                 <Link href="#announcements" className="text-gray-400 hover:text-orange-500">
-                  Announcements
+                  {t("links.announcements")}
+                </Link>
+              </li>
+              <li>
+                <Link href="#gallery" className="text-gray-400 hover:text-orange-500">
+                  {t("links.gallery")}
                 </Link>
               </li>
               <li>
                 <Link href="#contact" className="text-gray-400 hover:text-orange-500">
-                  Contact Us
+                  {t("links.contact")}
                 </Link>
               </li>
             </ul>
@@ -59,7 +67,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Info</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("contactInfo")}</h3>
             <ul className="space-y-2">
               <li className="flex items-center text-gray-400">
                 <MapPin className="h-4 w-4 mr-2" />
@@ -78,17 +86,17 @@ export function Footer() {
 
           {/* Hours */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Opening Hours</h3>
+            <h3 className="font-semibold text-lg mb-4">{t("openingHours")}</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-              <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-              <li>Sunday: 12:00 PM - 9:00 PM</li>
+              <li>{t("schedule.weekdays")}</li>
+              <li>{t("schedule.weekends")}</li>
+              <li>{t("schedule.sunday")}</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Delicious Bites. All rights reserved.</p>
+          <p>{t("copyright")}</p>
         </div>
       </div>
     </footer>
