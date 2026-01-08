@@ -19,7 +19,7 @@ export async function AnnouncementDetail({ id }: AnnouncementDetailProps) {
 
   if (!announcement) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-slate-950 text-white">
         <Navbar />
         <div className="container px-4 py-16">
           <div className="text-center">
@@ -42,28 +42,30 @@ export async function AnnouncementDetail({ id }: AnnouncementDetailProps) {
   const dateLabel = new Date(announcement.createdAt).toLocaleDateString(locale === "ko" ? "ko-KR" : "en-US")
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-slate-950 text-white">
       <Navbar />
       <main className="container px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <Link
             href={`/${locale}#process`}
-            className="inline-flex items-center text-orange-500 hover:text-orange-600 mb-8"
+            className="inline-flex items-center text-cyan-300 hover:text-cyan-200 mb-8"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             {t("backToList")}
           </Link>
 
-          <Card>
+          <Card className="border-white/10 bg-white/5 text-white">
             <CardHeader>
               <div className="flex items-center justify-between mb-4">
                 <Badge variant={announcement.featured ? "default" : "secondary"}>
                   {announcement.type[locale as "en" | "ko"]}
                 </Badge>
-                {announcement.featured && <Badge className="bg-orange-500">{t("featured")}</Badge>}
+                {announcement.featured && (
+                  <Badge className="bg-cyan-300 text-slate-950">{t("featured")}</Badge>
+                )}
               </div>
               <CardTitle className="text-3xl md:text-4xl mb-4">{title}</CardTitle>
-              <div className="flex items-center text-muted-foreground">
+              <div className="flex items-center text-white/60">
                 <Calendar className="h-4 w-4 mr-2" />
                 {dateLabel}
               </div>
@@ -74,7 +76,7 @@ export async function AnnouncementDetail({ id }: AnnouncementDetailProps) {
                   <img src={announcement.imageUrl} alt={title} className="h-72 w-full object-cover" />
                 </div>
               )}
-              <div className="prose prose-lg max-w-none">
+              <div className="prose prose-lg prose-invert max-w-none">
                 <p className="text-lg leading-relaxed">{content}</p>
               </div>
             </CardContent>
